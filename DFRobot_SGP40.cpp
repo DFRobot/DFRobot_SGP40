@@ -18,6 +18,7 @@ _pWire(pWire),_deviceAddr(DFRobot_SGP40_ICC_ADDR),_relativeHumidity(50),_tempera
 
 }
 
+
 bool DFRobot_SGP40::begin(uint32_t duration)
 {
   _pWire->begin();
