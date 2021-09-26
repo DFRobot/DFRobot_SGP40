@@ -33,8 +33,11 @@ VOC index can be read through SGP40's I2C interface. The data will be printed th
 
 ## Installation
 
-To use this library, download the library file first, paste it into the \Arduino\libraries directory, then open the examples folder and run the demo in the folder.
+To use this library, first download the library to Raspberry Pi, then open the routines folder. To execute one routine, demox.py, type python demox.py on the command line. To execute the get_raw_value.py routine, for example, you need to type:
 
+```
+python get_raw_value.py
+```
 ## Methods
 
 ```python
