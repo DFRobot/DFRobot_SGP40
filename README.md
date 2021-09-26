@@ -1,5 +1,5 @@
 # DFRobot_SGP40
-- [中文版](./README.md)
+- [中文版](./README_CN.md)
 
 The SGP40 Air Quality sensor adopts the new SGP40 digital VOC sensor chip launched by the well-known Sensirion. Based on the Sensirion’s CMOSens® technology, the SGP40 offers a complete sensor system on a single chip, a temperature-controlled micro-hotplate and a humidity-compensated indoor air quality signal. In combination with Sensirion’s powerful VOC algorithm, the sensor signal can be directly used to evaluate indoor air quality. It features low power(2.6mA), and fast response(2s). The data from the sensor can be directly used to evaluate air quality without calibration.
 
