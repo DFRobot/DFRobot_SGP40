@@ -1,9 +1,15 @@
 # DFRobot_SGP40
-## 产品链接（https://www.dfrobot.com/）
+- [中文版](./README.md)
+
+The SGP40 Air Quality sensor adopts the new SGP40 digital VOC sensor chip launched by the well-known Sensirion. Based on the Sensirion’s CMOSens® technology, the SGP40 offers a complete sensor system on a single chip, a temperature-controlled micro-hotplate and a humidity-compensated indoor air quality signal. In combination with Sensirion’s powerful VOC algorithm, the sensor signal can be directly used to evaluate indoor air quality. It features low power(2.6mA), and fast response(2s). The data from the sensor can be directly used to evaluate air quality without calibration.
+
+![](./resources/images/SEN0392.png)
+
+## Mall Link(https://www.dfrobot.com/product-2241.html)
     SKU：SEN0392
 
 ## DFRobot_SGP40 Library for Arduino
----------------------------------------------------------
+
 Provide an Arduino library for the SGP40 modules.
 
 ## Table of Contents
@@ -80,4 +86,4 @@ Microbit |       √      |             |            |
 
 ## Credits
 
-·Written by [yangfeng]<fary_young@outlook.com>,2020,(Welcome to our [website](https://www.dfrobot.com/))
+Written by yangfeng(feng.yang@dfrobot.com), 2021. (Welcome to our [website](https://www.dfrobot.com/))

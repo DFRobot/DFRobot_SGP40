@@ -1,43 +1,37 @@
 # DFRobot_SGP40
-- [中文版](./README.md)
+- [English Version](./README.md)
 
-The SGP40 Air Quality sensor adopts the new SGP40 digital VOC sensor chip launched by the well-known Sensirion. Based on the Sensirion’s CMOSens® technology, the SGP40 offers a complete sensor system on a single chip, a temperature-controlled micro-hotplate and a humidity-compensated indoor air quality signal. In combination with Sensirion’s powerful VOC algorithm, the sensor signal can be directly used to evaluate indoor air quality. It features low power(2.6mA), and fast response(2s). The data from the sensor can be directly used to evaluate air quality without calibration.
+SGP40空气质量传感器采用知名品牌Sensirion推出的新款SGP40数字VOC传感器芯片。基于Sensirion公司的CMOSens®技术，SGP40提供了一个完整的单芯片传感器系统，一个温控微热板和湿度补偿室内空气质量信号。结合Sensirion强大的VOC算法，传感器信号可以直接用于评价室内空气质量。低功耗(2.6mA)，响应速度快(2s)。来自传感器的数据可以直接用于评价空气质量，而无需校准。
 
 ![](../../resources/images/SEN0392.png)
 
-## Mall Link(https://www.dfrobot.com/product-2241.html)
-    SKU：SEN0392
 
-## DFRobot_SGP40 Library for Arduino
----------------------------------------------------------
-Provide an Arduino library for the SGP40 modules.
+## 产品链接 (https://www.dfrobot.com.cn/goods-3062.html)
 
-## Table of Contents
+    SKU:SEN0392
 
-* [Summary](#summary)
-* [Feature](#feature)
-* [Installation](#installation)
-* [Methods](#methods)
-* [History](#history)
-* [Credits](#credits)
-<snippet>
-<content>
+## 目录
 
-## Summary
-VOC index can be read through SGP40's I2C interface. The data will be printed through a serial port.
+* [概述](#概述)
+* [库安装](#库安装)
+* [方法](#方法)
+* [兼容性](#兼容性y)
+* [历史](#历史)
+* [创作者](#创作者)
 
-## Feature
+## 概述
 
-1.  Set ambient temperature and humidity for accurate calibration. Relative humidity unit: %RH, range: 0-100; Temperature unit: °C, range: -10~50
-2.  Read VOC index , range 0-500
+XYZ三刺激和红外数据的检测
 
-## Installation
+## 库安装
 
-To use this library, download the library file first, paste it into the \Arduino\libraries directory, then open the examples folder and run the demo in the folder.
+要使用这个库，首先将库下载到Raspberry Pi，然后打开例程文件夹。要执行一个例程demox.py，请在命令行中输入python demox.py。例如，要执行get_xyz_ir_data.py例程，你需要输入:
+```
+python get_xyz_ir_data.py
+```
+## 方法
 
-## Methods
-
-```python
+```Python
     '''
       @brief start equipment
       @param duration:int Set to Warm-up time
@@ -72,8 +66,7 @@ To use this library, download the library file first, paste it into the \Arduino
     get_voc_index(self)
 ```
 
-
-## Compatibility
+## 兼容性
 
 * RaspberryPi Version
 
@@ -83,7 +76,7 @@ To use this library, download the library file first, paste it into the \Arduino
 | RaspberryPi3 |           |            |    √     |         |
 | RaspberryPi4 |     √     |            |          |         |
 
-* Python Version
+* Python 版本
 
 | Python  | Work Well | Work Wrong | Untested | Remarks |
 | ------- | :-------: | :--------: | :------: | ------- |
@@ -91,12 +84,13 @@ To use this library, download the library file first, paste it into the \Arduino
 | Python3 |     √     |            |          |         |
 
 
-## History
+## 历史
 
-- data 2021-01-12
-- version V1.0
+- 日期 2021-9-26
+- 版本 V1.0.0
 
 
-## Credits
+## 创作者
 
 Written by yangfeng(feng.yang@dfrobot.com), 2021. (Welcome to our [website](https://www.dfrobot.com/))
+

@@ -199,8 +199,8 @@ class DFRobot_VOCAlgorithm:
         arg = FIX16_ONE
         for i in range(0,4):
             while (x >= arg):
-                res = self._fix16_mul(res, exp_values[i]);
-                x -= arg;
+                res = self._fix16_mul(res, exp_values[i])
+                x -= arg
             arg >>=3
         return res
     
@@ -238,7 +238,7 @@ class DFRobot_VOCAlgorithm:
         self.params.mtau_mean_variance_hours = self._fix16_from_int(learning_time_hours)
         self.params.mgating_max_duration_minutes =self._fix16_from_int(gating_max_duration_minutes)
         self.params.msraw_std_initial = self._fix16_from_int(std_initial)
-        self._vocalgorithm__init_instances();
+        self._vocalgorithm__init_instances()
     
     def vocalgorithm_process(self, sraw):
         if ((self.params.muptime <= self._f16(VOCALGORITHM_INITIAL_BLACKOUT))):
@@ -382,9 +382,9 @@ class DFRobot_VOCAlgorithm:
         self._vocalgorithm__mean_variance_estimator___sigmoid__set_parameters(self._f16(0.), self._f16(0.), self._f16(0.))
     
     def _vocalgorithm__mean_variance_estimator___sigmoid__set_parameters(self, L, X0, K):
-        self.params.m_mean_variance_estimator_sigmoid_l = L;
-        self.params.m_mean_variance_estimator_sigmoid_k = K;        
-        self.params.m_mean_variance_estimator_sigmoid_x0 = X0;        
+        self.params.m_mean_variance_estimator_sigmoid_l = L
+        self.params.m_mean_variance_estimator_sigmoid_k = K
+        self.params.m_mean_variance_estimator_sigmoid_x0 = X0
     
     def _vocalgorithm__mean_variance_estimator___sigmoid__process(self, sample):
         x = (self._fix16_mul(self.params.m_mean_variance_estimator_sigmoid_k,(sample - self.params.m_mean_variance_estimator_sigmoid_x0)))
@@ -399,8 +399,8 @@ class DFRobot_VOCAlgorithm:
         self._vocalgorithm__mox_model__set_parameters(self._f16(1.),self._f16(0.))
     
     def _vocalgorithm__mox_model__set_parameters(self,SRAW_STD,SRAW_MEAN):
-        self.params.m_mox_model_sraw_std = SRAW_STD;
-        self.params.m_mox_model_sraw_mean = SRAW_MEAN;        
+        self.params.m_mox_model_sraw_std = SRAW_STD
+        self.params.m_mox_model_sraw_mean = SRAW_MEAN
     
     def _vocalgorithm__mox_model__process(self,sraw):
         return (self._fix16_mul((self._fix16_div((sraw - self.params.m_mox_model_sraw_mean),(-(self.params.m_mox_model_sraw_std +self._f16(VOCALGORITHM_SRAW_STD_BONUS))))),self._f16(VOCALGORITHM_VOC_INDEX_GAIN)))
@@ -435,10 +435,10 @@ class DFRobot_VOCAlgorithm:
     
     def _vocalgorithm__adaptive_lowpass__process(self,sample):
         if ((self.params.m_adaptive_lowpass_initialized == 0)):
-            self.params.m_adaptive_lowpass_x1 = sample;
-            self.params.m_adaptive_lowpass_x2 = sample;
-            self.params.m_adaptive_lowpass_x3 = sample;
-            self.params.m_adaptive_lowpass_initialized = 1;
+            self.params.m_adaptive_lowpass_x1 = sample
+            self.params.m_adaptive_lowpass_x2 = sample
+            self.params.m_adaptive_lowpass_x3 = sample
+            self.params.m_adaptive_lowpass_initialized = 1
         self.params.m_adaptive_lowpass_x1 =((self._fix16_mul((self._f16(1.) - self.params.m_adaptive_lowpass_a1),self.params.m_adaptive_lowpass_x1)) +(self._fix16_mul(self.params.m_adaptive_lowpass_a1, sample)))
         
         self.params.m_adaptive_lowpass_x2 =((self._fix16_mul((self._f16(1.) - self.params.m_adaptive_lowpass_a2),self.params.m_adaptive_lowpass_x2)) +(self._fix16_mul(self.params.m_adaptive_lowpass_a2, sample)))

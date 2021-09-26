@@ -9,7 +9,7 @@
 *@date 2020-12-18
 *@url https://github.com/DFRobot/DFRobot_SGP40
 */
-#include <DFRobot_SGP40.h>
+#include "DFRobot_SGP40.h"
 #include "sensirion_arch_config.h"
 #include "sensirion_voc_algorithm.h"
 DFRobot_SGP40::DFRobot_SGP40(TwoWire *pWire):
@@ -17,7 +17,6 @@ _pWire(pWire),_deviceAddr(DFRobot_SGP40_ICC_ADDR),_relativeHumidity(50),_tempera
 {
 
 }
-
 
 bool DFRobot_SGP40::begin(uint32_t duration)
 {

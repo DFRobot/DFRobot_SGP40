@@ -19,7 +19,7 @@ sgp40=DFRobot_SGP40(bus = 1,relative_humidity = 50,temperature_c = 25)
 
 #set Warm-up time
 print 'Please wait 10 seconds...'
-sgp40.begin(10);
+sgp40.begin(10)
 
 #If you want to modify the environment parameters, you can do so
 #elativeHumidity(0-100%RH)  temperature(-10~50 centigrade)
