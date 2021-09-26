@@ -26,9 +26,9 @@ SGP40空气质量传感器采用知名品牌Sensirion推出的新款SGP40数字V
 
 ## 库安装
 
-要使用这个库，首先将库下载到Raspberry Pi，然后打开例程文件夹。要执行一个例程demox.py，请在命令行中输入python demox.py。例如，要执行get_xyz_ir_data.py例程，你需要输入:
+要使用这个库，首先将库下载到Raspberry Pi，然后打开例程文件夹。要执行一个例程demox.py，请在命令行中输入python demox.py。例如，要执行get_raw_value.py例程，你需要输入:
 ```
-python get_xyz_ir_data.py
+python get_raw_value.py
 ```
 ## 方法
 
