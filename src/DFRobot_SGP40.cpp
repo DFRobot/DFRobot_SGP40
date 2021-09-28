@@ -13,9 +13,11 @@
 #include "sensirion_arch_config.h"
 #include "sensirion_voc_algorithm.h"
 DFRobot_SGP40::DFRobot_SGP40(TwoWire *pWire):
-_pWire(pWire),_deviceAddr(DFRobot_SGP40_ICC_ADDR),_relativeHumidity(50),_temperatureC(25)
+_pWire(pWire),_temperatureC(25)
 {
-
+  _deviceAddr = DFRobot_SGP40_ICC_ADDR;
+  _relativeHumidity = 50.0;
+  _temperatureC=25.0;
 }
 
 bool DFRobot_SGP40::begin(uint32_t duration)
@@ -83,7 +85,7 @@ uint16_t DFRobot_SGP40::readRawData()
 {
   uint8_t data[3]={0,0,0};
   uint16_t value=0;
-  _pWire->requestFrom(_deviceAddr,3);
+  _pWire->requestFrom(_deviceAddr,(uint8_t)3);
   for(uint8_t i=0;i<3;i++){
     data[i]=_pWire->read();
   }
@@ -103,7 +105,7 @@ uint16_t DFRobot_SGP40::getVoclndex(void)
   }
   _pWire->endTransmission();
   delay(DURATION_READ_RAW_VOC);
-  _pWire->requestFrom(_deviceAddr,3);
+  _pWire->requestFrom(_deviceAddr,(uint8_t)3);
   for(uint8_t i=0;i<3;i++){
     data[i]=_pWire->read();
   }
@@ -123,7 +125,6 @@ void DFRobot_SGP40::spg40HeaterOff()
 bool DFRobot_SGP40::sgp40MeasureTest()
 {
   uint8_t testCommand[CMD_MEASURE_TEST_SIZE]={CMD_MEASURE_TEST_H,CMD_MEASURE_TEST_L};
-  uint16_t value=0;
   write(testCommand,CMD_MEASURE_TEST_SIZE);
   delay(DURATION_WAIT_MEASURE_TEST);
   if(readRawData()==TEST_OK){
