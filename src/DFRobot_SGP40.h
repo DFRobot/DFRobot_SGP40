@@ -52,7 +52,7 @@ public:
   #define INDEX_TEM_CHECK_CRC                               7
   
   #define DURATION_READ_RAW_VOC                             30
-  #define DURATION_WAIT_MEASURE_TEST                        300
+  #define DURATION_WAIT_MEASURE_TEST                        320
   
 public:
    /**
