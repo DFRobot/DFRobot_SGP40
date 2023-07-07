@@ -29,18 +29,19 @@ DFRobot_SGP40    mySgp40;
 
 
 void setup() {
-  Serial.begin(115200);
-  Serial.println("sgp40 is starting, the reading can be taken after 10 seconds...");
+  Serial.begin(115200); //Initialize Serial communication at 115200 baud(bits per second)
+  Serial.println("DFrobot Gravity SGP40 VOC Sensor Example");
+  Serial.println("SGP40 is starting, the reading can be taken after 10 seconds...");
   /*
    * The preheating time of the sensor is 10s.
    * duration:Initialize the wait time. Unit: millisecond. Suggestion: duration > = 10000 ms
    */
   while(mySgp40.begin(/*duration = */10000) !=true){
-    Serial.println("failed to init chip, please check if the chip connection is fine");
+    Serial.println("failed to initialize SGP40, please check wiring and cable connections"); //You need to press the Gravity cable all the way in.
     delay(1000);
   }
   Serial.println("----------------------------------------------");
-  Serial.println("sgp40 initialized successfully!");
+  Serial.println("SGP40 initialized successfully!");
   Serial.println("----------------------------------------------");
   /**
    * @brief  Set the temperature and humidity
@@ -61,7 +62,7 @@ void loop() {
    * @note       400-500，ventilate, purify intensely
    * @return The VOC index measured, ranged from 0 to 500
    */
-  uint16_t index = mySgp40.getVoclndex();
+  uint16_t index = mySgp40.getVoclndex();//Declare variable that is to be used to store VOC index.
   
   Serial.print("vocIndex = ");
   Serial.println(index);
