@@ -38,7 +38,7 @@ void setup() {
    * duration:Initialize the wait time. Unit: millisecond. Suggestion: duration > = 10000 ms
    */
   while(mySGP40.begin(/*duration = */10000) !=true){
-    Serial.println("failed to initialize SGP40, please check wiring and cable connections"); //You need to press the Gravity cable all the way in.
+    Serial.println("Failed to initialize SGP40, please check wiring and cable connections"); //You need to press the Gravity cable all the way in.
     delay(1000);
   }
   Serial.println("----------------------------------------------");
