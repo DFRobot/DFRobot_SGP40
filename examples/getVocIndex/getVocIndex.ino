@@ -8,7 +8,7 @@
  * @licence     The MIT License (MIT)
  * @author [yangfeng]<feng.yang@dfrobot.com>
  * @version  V1.0
- * @date  2020-12-18
+ * @date  2023-7-7
  * @get from https://www.dfrobot.com
  * @url  https://github.com/DFRobot/DFRobot_SGP40
  */
@@ -25,13 +25,14 @@
 
 //#include <Wire.h>
 //DFRobot_SGP40    mySgp40(&Wire);
-DFRobot_SGP40    mySgp40;
+DFRobot_SGP40    mySgp40;//Declare SGP40.
 
 
 void setup() {
   Serial.begin(115200); //Initialize Serial communication at 115200 baud(bits per second)
   Serial.println("DFrobot Gravity SGP40 VOC Sensor Example");
-  Serial.println("SGP40 is starting, the reading can be taken after 10 seconds...");
+  Serial.println(F("Starting " __FILE__ " from " __DATE__ __TIME__));//Just to help tell you what sketch your board is running.
+  Serial.println("SGP40 is booting up, sensor readings can be taken after 10 seconds...");
   /*
    * The preheating time of the sensor is 10s.
    * duration:Initialize the wait time. Unit: millisecond. Suggestion: duration > = 10000 ms
