@@ -68,7 +68,7 @@ To use this library, download the library file first, paste it into the \Arduino
 
 ## Compatibility
 
-MCU                | Work Well | Work Wrong | Untested  | Remarks
+MCU                | Works OK | Didn't Work  | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
 Arduino uno |       √      |             |            | 
 FireBeetle esp32 |       √      |             |            | 
