@@ -17,15 +17,15 @@
 /* 
  * Method 1: Pass in the address of the specified I2C object
  * #include <Wire.h>
- * DFRobot_SGP40    mySgp40(&Wire);
+ * DFRobot_SGP40    mySGP40(&Wire);
  
  * Method 2: Use the default I2C object &Wire
  *I2C Default address: 0x59
  */
 
 //#include <Wire.h>
-//DFRobot_SGP40    mySgp40(&Wire);
-DFRobot_SGP40    mySgp40;//Declare SGP40.
+//DFRobot_SGP40    mySGP40(&Wire);
+DFRobot_SGP40    mySGP40;//Declare SGP40.
 
 
 void setup() {
@@ -37,7 +37,7 @@ void setup() {
    * The preheating time of the sensor is 10s.
    * duration:Initialize the wait time. Unit: millisecond. Suggestion: duration > = 10000 ms
    */
-  while(mySgp40.begin(/*duration = */10000) !=true){
+  while(mySGP40.begin(/*duration = */10000) !=true){
     Serial.println("failed to initialize SGP40, please check wiring and cable connections"); //You need to press the Gravity cable all the way in.
     delay(1000);
   }
@@ -49,7 +49,7 @@ void setup() {
    * @param  relativeHumidityRH  Current environmental relative humidity value, range 0-100, unit: %RH
    * @param  temperatureC  Current ambient temperature, range -10~50, unit: °C
    */
-  //mySgp40.setRhT(/*relativeHumidity = */ 50, /*temperature = */ 20);
+  //mySGP40.setRhT(/*relativeHumidity = */ 50, /*temperature = */ 20);
   
 }
 
@@ -63,7 +63,7 @@ void loop() {
    * @note       400-500，ventilate, purify intensely
    * @return The VOC index measured, ranged from 0 to 500
    */
-  uint16_t index = mySgp40.getVoclndex();//Declare variable that is to be used to store VOC index.
+  uint16_t index = mySGP40.getVoclndex();//Declare variable that is to be used to store VOC index.
   
   Serial.print("vocIndex = ");
   Serial.println(index);
