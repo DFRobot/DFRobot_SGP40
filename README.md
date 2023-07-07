@@ -10,7 +10,7 @@ The SGP40 Air Quality sensor adopts the new SGP40 digital VOC sensor chip launch
 
 ## DFRobot_SGP40 Library for Arduino
 
-Provide an Arduino library for the SGP40 modules.
+An Arduino library for the SGP40 module.
 
 ## Table of Contents
 
