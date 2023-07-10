@@ -70,12 +70,12 @@ To use this library, download the library file first, paste it into the \Arduino
 
 MCU                | Works OK | Didn't Work  | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-Arduino uno |       √      |             |            | 
-FireBeetle esp32 |       √      |             |            | 
-FireBeetle esp8266 |       √      |             |            | 
-FireBeetle m0 |       √      |             |            | 
-Leonardo |       √      |             |            | 
-Microbit |       √      |             |            | 
+Arduino Uno |       √      |             |            | 
+FireBeetle ESP32 |       √      |             |            | 
+FireBeetle ESP8266 |       √      |             |            | 
+FireBeetle M0 |       √      |             |            | 
+Arduino Leonardo |       √      |             |            | 
+MicroBit |       √      |             |            | 
 
 
 ## History
