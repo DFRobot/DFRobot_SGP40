@@ -10,7 +10,7 @@ The SGP40 Air Quality sensor adopts the new SGP40 digital VOC sensor chip launch
 
 ## DFRobot_SGP40 Library for Arduino
 
-Provide an Arduino library for the SGP40 modules.
+An Arduino library for the SGP40 module.
 
 ## Table of Contents
 
@@ -68,14 +68,14 @@ To use this library, download the library file first, paste it into the \Arduino
 
 ## Compatibility
 
-MCU                | Work Well | Work Wrong | Untested  | Remarks
+MCU                | Works OK | Didn't Work  | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-Arduino uno |       √      |             |            | 
-FireBeetle esp32 |       √      |             |            | 
-FireBeetle esp8266 |       √      |             |            | 
-FireBeetle m0 |       √      |             |            | 
-Leonardo |       √      |             |            | 
-Microbit |       √      |             |            | 
+Arduino Uno |       √      |             |            | 
+FireBeetle ESP32 |       √      |             |            | 
+FireBeetle ESP8266 |       √      |             |            | 
+FireBeetle M0 |       √      |             |            | 
+Arduino Leonardo |       √      |             |            | 
+MicroBit |       √      |             |            | 
 
 
 ## History
