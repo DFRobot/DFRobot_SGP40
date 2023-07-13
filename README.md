@@ -6,12 +6,12 @@ The SGP40 Air Quality sensor adopts the new SGP40 digital VOC sensor chip launch
 ![](./resources/images/SEN0392.png)
 
 ## Product links.
-*[Fermion Version](https://www.dfrobot.com/product-2241.html) 
-   * SKU：SEN0392
-   *[Product wiki.](https://wiki.dfrobot.com/SGP40_Air_Quality_Sensor_SKU_SEN0392)
-*[Gravity Version](https://www.dfrobot.com/product-2251.html)
-    *SKU:SEN0394 
-    *[Product wiki.](https://wiki.dfrobot.com/Gravity_SGP40_Air_Quality_Sensor_SKU_SEN0394)
+* [Fermion Version](https://www.dfrobot.com/product-2241.html) 
+    * SKU: SEN0392
+    * [Product wiki.](https://wiki.dfrobot.com/SGP40_Air_Quality_Sensor_SKU_SEN0392)
+* [Gravity Version](https://www.dfrobot.com/product-2251.html)
+    * SKU: SEN0394 
+    * [Product wiki.](https://wiki.dfrobot.com/Gravity_SGP40_Air_Quality_Sensor_SKU_SEN0394)
     
    
 
